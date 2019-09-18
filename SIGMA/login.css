@@ -1,7 +1,10 @@
 body {
     background: url(sigmaback.jpg) repeat;
   }
-  
+  img{
+    padding-left: 70px;
+    padding-top: 40px;
+  }
   body:before {
       content: '';
       position: absolute;
@@ -26,10 +29,16 @@ body {
     }
 
     .logo{
-        width: 400px;
+
+      width: 250px;
+    
+          position: relative;
+          top: 40%;
+          left: 35%;
+        /*width: 400px;
         position: relative;
         top: 30%;
-        left:38%;
+        left:38%;*/
     }
     .lbox input{
         width:100%;
@@ -56,4 +65,16 @@ body {
     color: #fff;
     font-size: 18px;
     border-radius: 20px;
+}
+
+a{
+  text-decoration: none;
+    font-weight: bold;
+    color: purple;
+    font-size: 14px;
+}
+
+a[register]{
+  padding-left: 10px;
+  padding-right: 40px;
 }
