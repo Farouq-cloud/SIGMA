@@ -1,0 +1,37 @@
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/style.css') }}" >
+    <title>Sign up page</title>
+</head>
+<body>
+    <!-- <div class=Hello>Welcome! We are glad to have you today.</div> -->
+    <div>
+    <div class=Hello>Welcome! We are glad to have you today.</div>
+        
+        <img class=logo src="{{ url_for('static', filename='styles/sigma-logo.png') }}" alt="sigma logo">
+    </div>
+    <div class=loginbox>
+ 
+        <form  method="POST" action="/signup">
+            
+            <input type="text" name="username" placeholder="username" id="username">
+
+            <input type="email" name="email" placeholder="Email Address" id="Email">
+          
+            <input type="password" name="password" placeholder=Password id="Password">
+  
+            <input type="password" name="confirm_password" placeholder="Confirm Password"  id="confirm_password">
+    
+    
+            <input type="submit" value="Register"><br>
+            <div class="existing">Already have an account? <a href="login.html" _blank>login</a></div> 
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}

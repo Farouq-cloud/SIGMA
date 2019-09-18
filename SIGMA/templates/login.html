@@ -1,0 +1,31 @@
+{% block contents %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/login.css') }}">
+    <title>Login up page</title>
+</head>
+<body>
+    <div>
+        <img class=logo src="./sigma logo.png" alt="sigma logo">
+    </div>
+    <div class=lbox >
+ 
+        <form method="POST" action="/login">
+            
+            <input type="text" name="username" placeholder= Username id="username">
+          
+            <input type="password" name="password" placeholder=Password id="Password"><br>
+    
+            <input type="submit" value="login"><br>
+            <div><a href="./index.html" register target='_blank'>Register</a>
+                <a href="#" target='_blank'>Forgot Password</a>
+            </div> 
+        </form>
+    </div>
+</body>
+</html>
+{% endblock %}
