@@ -1,0 +1,69 @@
+body {
+    background: url(sigmaback.jpg) repeat;
+  }
+  
+  body:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background:#8703b2;
+      opacity: 0.38;}
+
+.loginbox{
+    width: 320px;
+    height: 420PX;
+    background-color: white;
+    box-sizing: border-box;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top:50%;
+    left: 35%;
+    border-radius: 5%;
+    padding: 70px 30px;
+}
+.loginbox input{
+    width:100%;
+    height: 25px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.broad{
+    width: 500px;
+    position: absolute;
+    top: 45%;
+}
+.logo{
+    width: 400px;
+    position: absolute;
+    top: 25%;
+    left:60%;
+}
+.Hello{
+    color: #fff;
+    position: absolute;
+    top:55%;
+    left:55%;
+    font-size:30px;
+}
+.loginbox input[type=submit]{
+    border:none;
+    outline:none;
+    height: 40px;
+    background:#8703b2;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.loginbox input[type=text], input[type=password], input[type=Email]{
+    outline:black;
+    height: 40px;
+    background:#fff;
+    color: rgb(15, 13, 13);
+    font-size: 18px;
+    border-radius: 20px;
+    text-align: center;
+}
+
