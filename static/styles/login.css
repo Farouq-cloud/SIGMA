@@ -12,8 +12,8 @@ body {
       bottom: 0;
       right: 0;
       left: 0;
-      background:#8703b2;
-      opacity: 0.38;}
+     background-image:linear-gradient(to bottom right,rgba(135,3,178,0.38), rgba(4,43,20,0.38)) ;
+     }
 
       .lbox{
         width: 280px;
