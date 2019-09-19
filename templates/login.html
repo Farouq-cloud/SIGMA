@@ -1,4 +1,3 @@
-{% block contents %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +8,18 @@
     <title>Login up page</title>
 </head>
 <body>
+    {% block contents %}
     <div>
-        <img class=logo src="./sigma logo.png" alt="sigma logo">
+        <img class=logo src="{{ url_for('static', filename='styles/sigma-logo.png') }}" alt="sigma logo">
     </div>
     <div class=lbox >
- 
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="notification is-danger">
+                    {{ messages[0] }}
+                </div>
+            {% endif %}
+            {% endwith %}
         <form method="POST" action="/login">
             
             <input type="text" name="username" placeholder= Username id="username">
@@ -21,7 +27,7 @@
             <input type="password" name="password" placeholder=Password id="Password"><br>
     
             <input type="submit" value="login"><br>
-            <div><a href="./index.html" register target='_blank'>Register</a>
+            <div><a href="{{ url_for('auth.signup') }}" register target='_blank'>Register</a>
                 <a href="#" target='_blank'>Forgot Password</a>
             </div> 
         </form>
