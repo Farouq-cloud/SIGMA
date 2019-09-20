@@ -54,9 +54,9 @@ def signup_post():
             flash("Passwords do not match")
             return render_template('index.html')
     else:
-            user = User.query.filter_by(email=email).first()
+            user = User.query.filter_by(username=username).first()
             if user is not None:
-                flash('A user with that email already exists')
+                flash('A user with that username already exists')
                 return render_template('index.html')
             user = User.query.filter_by(email=email).first()
             if user is not None:
