@@ -26,7 +26,7 @@ def login_post():
         flash('Wrong Credentials')
         return render_template('login.html')
     flash('Log in successful')
-    return redirect('/')
+    return redirect(url_for('auth.login'))
 
 
 
@@ -68,4 +68,3 @@ def signup_post():
             db.session.commit()
             return redirect(url_for('auth.login'))
 
-    return render_template('signup.html')
